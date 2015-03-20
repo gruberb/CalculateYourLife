@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) [![Build Status](https://api.travis-ci.org/ngbp/ngbp.png?branch=v0.3.2-release)](https://travis-ci.org/ngbp/ngbp)
 
 An opinionated kickstarter for [AngularJS](http://angularjs.org) projects.
@@ -378,3 +379,7 @@ of you!
 Make sure to check out the [Contributing Guide](./CONTRIBUTING.md).
 
 So join the team! We're good people.
+=======
+# CalculateYourLife
+Calculate what you really earn
+>>>>>>> b0e9e7a4bf203dc0e88f62ff1011e3312a01ebee
