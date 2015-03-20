@@ -13,8 +13,7 @@
  * specified, as shown below.
  */
 angular.module( 'CalculateYourLife.home', [
-  'ui.router',
-  'plusOne'
+  'ui.router'
 ])
 
 /**
@@ -38,8 +37,24 @@ angular.module( 'CalculateYourLife.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope ) {
-})
+.controller('HomeCtrl', ['$scope','Income', 'Outcome', function HomeController( $scope, Income, Outcome ) {
+  console.log("inside HomeCtrl");
+  $scope.income = {};
+  $scope.outcome = {};
+  $scope.expenses = [];
+
+  $scope.addIncome = function() {
+    var income = new Income($scope.income);
+    $scope.income.income_per_hour = Math.round(income.income_per_hour).toFixed(2);
+    $scope.disable_income = true;
+  };
+
+  $scope.addOutcome = function() {
+    var outcome = new Outcome($scope.outcome);
+    $scope.expenses.push(outcome);
+  };
+
+}])
 
 ;
 
