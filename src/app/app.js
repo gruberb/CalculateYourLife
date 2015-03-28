@@ -4,6 +4,7 @@ angular.module('CalculateYourLife', [
   'CalculateYourLife.home',
   'CalculateYourLife.income',
   'CalculateYourLife.outcome',
+  'CalculateYourLife.expenses',
   'CalculateYourLife.utils',
   'ui.router'
 ])

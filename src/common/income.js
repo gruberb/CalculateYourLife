@@ -8,13 +8,5 @@ angular.module( 'CalculateYourLife.income', []).factory('Income', ['Utils', func
     this.income_per_hour = Utils.calculate_income_per_hour(incomeData.amount, incomeData.period, incomeData.hours_per_week);
   };
 
-  console.log(Income.income_per_hour);
-
-  // Income.prototype = {
-  //   setData: function(incomeData) {
-  //     angular.extend(this, incomeData);
-  //   }
-  // };
-
   return Income;
 }]);
