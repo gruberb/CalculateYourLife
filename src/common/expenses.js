@@ -18,6 +18,10 @@ angular.module( 'CalculateYourLife.expenses', []).factory('Expenses',['Utils', f
 
       return _outcome;
     };
+
+    this.remove_item = function(outcome) {
+      this.list.splice(_.indexOf(this.list, outcome), 1);
+    };
   };
 
   return Expenses;

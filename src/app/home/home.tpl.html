@@ -89,11 +89,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="item in expenses.list" ng-click="editExpense(item)">
+      <tr ng-repeat="item in expenses.list">
         <td>{{item.id}}</td>
         <td>{{item.title}}</td>
         <td>{{item.cost_per_week}} €</td>
         <td>{{item.hours_per_week}}</td>
+        <td ng-click="editExpense(item)">Edit</td>
+        <td class="text-center" ng-click="expenses.remove_item(item)">x</td>
       </tr>
     </tbody>
   </table>
