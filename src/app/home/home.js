@@ -16,7 +16,6 @@ angular.module( 'CalculateYourLife.home', [
 })
 
 .controller('HomeCtrl', ['$scope','Income', 'Outcome', 'Expenses', function HomeController( $scope, Income, Outcome, Expenses ) {
-  console.log("inside HomeCtrl");
   $scope.hours = 0;
   $scope.income_per_hour = 0;
   $scope.income = {};
@@ -33,7 +32,6 @@ angular.module( 'CalculateYourLife.home', [
 
   $scope.addOutcome = function() {
     var outcome = new Outcome($scope.outcome, $scope.expenses);
-    console.log("expenses", $scope.expenses);
     $scope.expenses.add_item(outcome);
     $scope.sum_income();
     $scope.sum_hours();
@@ -42,7 +40,6 @@ angular.module( 'CalculateYourLife.home', [
 
   $scope.editOutcome = function(outcome) {
     var _outcome = $scope.expenses.get_outcome_by_id(outcome);
-    console.log(_outcome);
     _outcome.edit_outcome(outcome);
     $scope.outcome = {};
   };
@@ -68,8 +65,6 @@ angular.module( 'CalculateYourLife.home', [
   };
 
   $scope.editExpense = function(expense) {
-    console.log('expense', expense);
-    console.log('scope outcome', $scope.outcome);
     $scope.outcome = expense;
   };
 
